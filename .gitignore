@@ -1,0 +1,14 @@
+logs/
+node_modules/
+coverage/
+
+yarn-error.log
+npm-debug.log
+
+.rpt2_cache/
+.history
+.idea/
+.DS_Store
+*.swp
+
+dist/
