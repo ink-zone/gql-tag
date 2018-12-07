@@ -1,6 +1,6 @@
 import gql from '../src/index'
 
-test('no variables', () => {
+test('simple', () => {
   const GET_TODO = `
     {
       id
@@ -18,7 +18,7 @@ test('no variables', () => {
   expect(GET_TODO).toBe(GET_TODO_GQL)
 })
 
-test('has variables', () => {
+test('has graphql variables', () => {
   const QUERY_TODO = `
     query Todos($id: ID) {
       user(id: 5) {
@@ -38,4 +38,24 @@ test('has variables', () => {
   `
 
   expect(QUERY_TODO).toBe(GET_TODO_GQL)
+})
+
+test('with outer variables', () => {
+  const titleKey = 'title'
+
+  const GET_TODO = `
+    {
+      id
+      ${titleKey}
+    }
+  `
+
+  const GET_TODO_GQL = gql`
+    {
+      id
+      ${titleKey}
+    }
+  `
+
+  expect(GET_TODO).toBe(GET_TODO_GQL)
 })
