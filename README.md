@@ -19,7 +19,7 @@ import gql from 'gql-tag'
 
 const QUERY_TODO = `
   query Todos($id: ID) {
-    user(id: 5) {
+    todo(id: 5) {
       id
       title
     }
@@ -28,7 +28,7 @@ const QUERY_TODO = `
 
 const GET_TODO_GQL = gql`
   query Todos($id: ID) {
-    user(id: 5) {
+    todo(id: 5) {
       id
       title
     }
