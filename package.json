@@ -1,6 +1,6 @@
 {
   "name": "gql-tag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "gql-tag like but not convert to AST",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
